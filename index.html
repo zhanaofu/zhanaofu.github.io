@@ -6,16 +6,18 @@
   <meta name="description" content="Personal website of Zhanao Fu 傅占鳌, a PhD student at Department of Linguistics, University of Toronto">
 	<meta name="keywords" content="Zhanao Fu, linguistics, University of Toronto, 傅占鳌">
 	<meta name="google-site-verification" content="tIWLVVwPIZaHWTj2dM0MxGm39hfySMztKbm7eMHvHnE" />
-	<meta name="baidu-site-verification" content="code-PtHTuSFthN" />
 	<meta charset="utf-8">
 	<style>
+		html{
+			scroll-behavior: smooth;
+		}
 		.box0{
 			position: fixed;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
-   			background-image: url("files/bg.jpg");
+   		background-image: url("files/bg.jpg");
 			background-repeat: no-repeat;
 			background-position: center center;
 			background-size: cover;
@@ -32,6 +34,46 @@
 			padding: 30px;
 			font-family: "Helvetica";
 			line-height: 1.2;
+		}
+		.box2{
+			position: -webkit-sticky;
+			position: sticky;
+			top: 5px;
+			width: fit-content;
+			background-color:rgba(255, 255, 255, 0.8);
+			border: 1px solid gray;
+			font-family: "Helvetica";
+			line-height: 4;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			padding-left: 10px;
+			padding-right: 10px;
+			margin-left: -100%;
+			margin-top: 5px;
+			border-radius: 5px;
+			float: left;
+			transition: ease 0.3s;
+		}
+		.btn{
+			position: -webkit-sticky;
+			position: sticky;
+			top: 5px;
+			margin-left: 5px;
+			margin-top: 5px;
+			width: 32px;
+			height: 30px;
+			float: left;
+			border-radius: 20%;
+			border: none;
+			background: none;
+			background-image: url("files/menu.png");
+			background-repeat: no-repeat;
+		  background-size: 30px;
+		  background-position: center;
+			cursor: pointer;
+		}
+		.btn:hover{
+			background-color:rgba(255, 255, 255, 0.8);
 		}
 		.photo{
 			width: 100px;
@@ -63,30 +105,52 @@
 			color: black;
 		}
 	</style>
+	<script>
+	function m(){
+
+	  if(document.getElementById("menu").style.marginLeft == "5px")
+	 {document.getElementById("menu").style.marginLeft ="-100%"
+
+	}
+	 else{
+	 document.getElementById("menu").style.marginLeft = "5px"
+	}
+	}
+	</script>
 </head>
 <body>
 	<div class="box0">
-		<div class="box1">
+		<div class="box2" id="menu">
+				<p>
+					<a href="#Overview">Overview</a><br>
+					<a href="#Papers">Papers</a><br>
+					<a href="#Presentations">Presentations</a><br>
+					<a href="#Random">Random stuff</a>
+				</p>
+		</div>
+		<button class="btn" onclick="m()"></button>
+
+		<div class="box1" id="Overview">
 			<h1>Zhanao Fu 傅占鳌<img src="files/ZhanaoFu.jpg" alt="Zhanao Fu" class="photo"></h1>
 			<p>PhD student at Department of Linguistics, University of Toronto</p>
 			<p>
 				Links: <a href="mailto:zhanao.fu@mail.utoronto.ca">Email</a> | <a href="https://scholar.google.com/citations?user=6_TAMhYAAAAJ&hl=en&inst=315209982802967212">Google Scholar</a> | <a href="https://osf.io/68t24/">OSF</a> | <a href="https://github.com/zhanaofu">GitHub</a>
 			</p>
 			<hr>
-			<h2>Paper</h2>
+			<h2 id="Papers">Papers</h2>
 			<ul>
 			<li>Monahan PJ, Schertz J, <b>Fu Z</b>, Pérez A (submitted). Unified coding of spectral and temporal phonetic cues: Electrophysiological evidence for abstract phonological features. <<a href="https://osf.io/24y7z">preprint</a>> <<a href="https://osf.io/jn5cr/">data</a>></li>
 			<li>Pérez A, Davis MH, Ince RAA, Zhang H, <b>Fu Z</b>, Lamarca M, Lambon Ralph MA, Monahan PJ (submitted). Joint entrainment to the speech envelope during speaking and listening cannot completely explain brain-to-brain synchronisation. <<a href="https://psyarxiv.com/tzhn4/">preprint</a>> <<a href="https://osf.io/whuxy/">data</a>></li>
 			<li><b>Fu, Z</b>, Monahan, PJ (2021). Extracting phonetic features from natural classes: A mismatch negativity study of Mandarin Chinese retroflex consonants. <i> Frontiers in human neuroscience.</i> <<a href="https://www.frontiersin.org/articles/10.3389/fnhum.2021.609898">link</a>> <<a href="https://osf.io/uyg9e/">data</a>></li>
 			</ul>
-			<h2>Presentation</h2>
+			<h2 id="Presentations">Presentations</h2>
 			<ul>
 			<li><b>Fu, Z</b>, Monahan, PJ (2021). Extracting phonetic features from natural classes: A mismatch negativity study of Mandarin retroflex consonants. PsychoShorts 2021, University of Ottawa.</li>
 			<li>Leung, A M, <b>Fu, Z</b>, & Monahan, PJ Effect of Visual Integration of Pitch Contour in Mandarin Tone Perception. <i>Book of Abstracts MMSYM 2019</i>, 18. <<a href="http://mmsym.org/wp-content/uploads/2016/09/MMSYM2019-book-of-abstracts-0905.pdf#page=18">link</a>></li>
 			<li><b>Fu, Z</b>, & Monahan, PJ (2019). Bidirectional decay of auditory memory traces for pitch in speech sounds. <i>The Journal of the Acoustical Society of America, 145</i>(3), 1914-1915. <<a href="https://asa.scitation.org/doi/pdf/10.1121/1.5101950">link</a>></li>
 			</ul>
 			<hr>
-			<h2>Random stuff</h2>
+			<h2 id="Random">Random stuff</h2>
 			<ul>
 				<li>A <a href="https://zhanaofu.github.io/tubemodel/">vowel synthesizer</a> based on a simple tube model for the vocal tract - Developed for LIN228 Phonetics tutorials (Fall 2020)</li>
 				<li>Guess where the background photo was taken &mdash; Answer: <span class="black">Gold Coast, Australia</span></li>
