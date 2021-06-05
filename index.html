@@ -8,9 +8,6 @@
 	<meta name="google-site-verification" content="tIWLVVwPIZaHWTj2dM0MxGm39hfySMztKbm7eMHvHnE" />
 	<meta charset="utf-8">
 	<style>
-		html{
-			scroll-behavior: smooth;
-		}
 		.box0{
 			position: fixed;
 			top: 0;
@@ -29,6 +26,7 @@
 			margin-right: 10vw;
 			margin-top: 5vh;
 			margin-bottom: 100vh;
+			z-index: 1;
 			border-radius: 10px;
 			background-color: white;
 			padding: 30px;
@@ -40,8 +38,10 @@
 			position: sticky;
 			top: 5px;
 			width: fit-content;
-			background-color:rgba(255, 255, 255, 0.8);
-			border: 1px solid gray;
+			z-index: 2;
+			background-color:rgba(255, 255, 255, 0.5);
+			-webkit-backdrop-filter: blur(3px);
+			backdrop-filter: blur(3px);
 			font-family: "Helvetica";
 			line-height: 4;
 			padding-top: 15px;
@@ -49,20 +49,22 @@
 			padding-left: 10px;
 			padding-right: 10px;
 			margin-left: -100%;
-			margin-top: 5px;
-			border-radius: 5px;
+			margin-top: 10px;
+			border-radius: 10px;
 			float: left;
+			text-align: center;
 			transition: ease 0.3s;
 		}
 		.btn{
 			position: -webkit-sticky;
 			position: sticky;
+			float: left;
 			top: 5px;
+			z-index: 2;
 			margin-left: 5px;
 			margin-top: 5px;
 			width: 32px;
 			height: 30px;
-			float: left;
 			border-radius: 20%;
 			border: none;
 			background: none;
@@ -73,7 +75,9 @@
 			cursor: pointer;
 		}
 		.btn:hover{
-			background-color:rgba(255, 255, 255, 0.8);
+			background-color:rgba(255, 255, 255, 0.5);
+			-webkit-backdrop-filter: blur(3px);
+			backdrop-filter: blur(3px);
 		}
 		.photo{
 			width: 100px;
@@ -87,9 +91,19 @@
 		.black:hover{
 			background-color: white;
 		}
+		.a2{
+			color: #505050;
+			font-weight: 100;
+			margin: 17px 0;
+			text-decoration: none;
+		}
+		.a2:hover{
+			color: black;
+		}
 		h1{
 			font-weight: 500;
 		}
+
 		h2{
 			font-weight: 300;
 		}
@@ -101,9 +115,10 @@
 		ul {
 		list-style-type: square;
 		}
-		a{
+		a {
 			color: black;
 		}
+
 	</style>
 	<script>
 	function m(){
@@ -119,19 +134,20 @@
 	</script>
 </head>
 <body>
-	<div class="box0">
-		<div class="box2" id="menu">
-				<p>
-					<a href="#Overview">Overview</a><br>
-					<a href="#Papers">Papers</a><br>
-					<a href="#Presentations">Presentations</a><br>
-					<a href="#Random">Random stuff</a>
-				</p>
-		</div>
-		<button class="btn" onclick="m()"></button>
+	<div class="box2" id="menu">
+				<a href="#About" class="a2">ABOUT</a><br>
+				<a href="#Papers" class="a2">PAPERS</a><br>
+				<a href="#Presentations" class="a2">PRESENTATIONS</a><br>
+				<a href="#Random" class="a2">RANDOM STUFF</a>
+	</div>
 
-		<div class="box1" id="Overview">
-			<h1>Zhanao Fu 傅占鳌<img src="files/ZhanaoFu.jpg" alt="Zhanao Fu" class="photo"></h1>
+	<button class="btn" onclick="m()"></button>
+	<button class="btn" onclick="location.href='#About'" type="button" style="background-image: url('files/up.png');"></button>
+
+	<div class="box0">
+		<div class="box1" id="About">
+			<img src="files/ZhanaoFu.jpg" alt="Zhanao Fu" class="photo">
+			<h1>Zhanao Fu 傅占鳌</h1>
 			<p>PhD student at Department of Linguistics, University of Toronto</p>
 			<p>
 				Links: <a href="mailto:zhanao.fu@mail.utoronto.ca">Email</a> | <a href="https://scholar.google.com/citations?user=6_TAMhYAAAAJ&hl=en&inst=315209982802967212">Google Scholar</a> | <a href="https://osf.io/68t24/">OSF</a> | <a href="https://github.com/zhanaofu">GitHub</a>
